@@ -1,28 +1,3 @@
-/**
- * PERHATIAN!
- *
- * File ini berisi daftar kata yang digolongkan berdasarkan kategorinya.
- * Jika anda ingin berkontribusi dalam menambahkan/memperbaiki kata-kata
- * dalam kategori yang sudah ada, dan/atau menambahkan kategori baru,
- * silahkan kirimkan `Pull Request` pada link GitHub berikut.
- *
- * https://github.com/Andndre/pembuat-kalimat
- *
- * ARTI SIMBOL-SIMBOL:
- * 	;					PEMISAH STATEMENT
- * 	? 				JIKA SAMA DENGAN
- * 	= 				SET CONTEXT
- *
- * Catatan: semua variabel merupakan string, sehingga tidak perlu lagi menyertakan tanda kutip ("") (Spasi diperbolehkan)
- *
- * Simbol JIKA (?) dipakai jika sesuatu tersebut hanya dapat dimiliki/dialami oleh (*) sesuai variabel yang telah ditetapkan
- * Misalnya, anting-anting hanya dipakai oleh perempuan
- * ```ts
- * const aksesoris = ['anting-anting ; gender ? perempuan']
- * const namaPerempuan = ['Susi ; gender = perempuan']
- * ```
- */
-/** */
 export const aksesoris = [
 	'anting-anting ; gender ? perempuan',
 	'jam tangan',
