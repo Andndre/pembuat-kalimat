@@ -11,7 +11,7 @@
  * ARTI SIMBOL-SIMBOL:
  * 	;					PEMISAH STATEMENT
  * 	? 				JIKA SAMA DENGAN
- * 	= 				SET
+ * 	= 				SET CONTEXT
  *
  * Catatan: semua variabel merupakan string, sehingga tidak perlu lagi menyertakan tanda kutip ("") (Spasi diperbolehkan)
  *
