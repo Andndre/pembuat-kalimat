@@ -6,7 +6,7 @@
  * dalam kategori yang sudah ada, dan/atau menambahkan kategori baru,
  * silahkan kirimkan `Pull Request` pada link GitHub berikut.
  *
- * https://github.com/Andndre/{nama-repo}
+ * https://github.com/Andndre/pembuat-kalimat
  *
  * ARTI SIMBOL-SIMBOL:
  * 	;					PEMISAH STATEMENT
