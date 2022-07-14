@@ -1,10 +1,9 @@
-import { templat, Generator, acak, kamus } from '../mod.ts';
+import { KalimatAcak, kamus, templat } from '../mod.ts';
 
-const templates: Generator[] = [
-	templat`Saya pergi ke ${kamus.tempat} untuk mencari ${kamus.makanan}`,
-	templat`${kamus.namaLakiLaki} sedang mengenakan ${kamus.aksesoris} pemberian ${kamus.keluarga}nya`,
-];
+const kalimatAcak = new KalimatAcak()
+	.tambah(templat`Saya pergi ke ${kamus.tempat} untuk mencari ${kamus.makanan}`)
+	.tambah(
+		templat`${kamus.namaLakiLaki} sedang mengenakan ${kamus.aksesoris} pemberian ${kamus.keluarga}nya`
+	);
 
-const generate = () => acak(templates)();
-
-console.log(generate());
+console.log(kalimatAcak.acak());

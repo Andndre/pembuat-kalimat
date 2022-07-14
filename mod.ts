@@ -1,4 +1,5 @@
 export * as kamus from './kamus.ts';
+export { KalimatAcak } from './kalimatAcak.ts';
 
 /**
  * @param array array sumber
