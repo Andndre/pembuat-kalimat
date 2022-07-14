@@ -2,7 +2,11 @@
 
 **Contoh penggunaan:**
 ```ts
-import { KalimatAcak, kamus, templat } from 'https://github.com/Andndre/pembuat-kalimat/raw/main/mod.ts';
+import {
+	KalimatAcak,
+	kamus,
+	templat,
+} from 'https://raw.githubusercontent.com/Andndre/pembuat-kalimat/v0.1.0/mod.ts';
 
 const kalimatAcak = new KalimatAcak()
 	.tambah(templat`Saya pergi ke ${kamus.tempat} untuk mencari ${kamus.makanan}`)
