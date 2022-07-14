@@ -55,7 +55,7 @@ export const templat = (
 					let $acak: string;
 					do {
 						$acak = acak(dicts[index]);
-						if (adaDalamArray($acak.split(''), ';')) {
+						if (!adaDalamArray($acak.split(''), ';')) {
 							const result = `${value}${$acak}`;
 							log(`Appending ${result}`);
 							return result;
