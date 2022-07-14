@@ -7,6 +7,18 @@ export * as kamus from './kamus.ts';
 export const acak = <T>(array: T[]): T =>
 	array[Math.floor(Math.random() * array.length)];
 
+const adaDalamArray = <T>(array: T[], itu: T): boolean => {
+	return array.indexOf(itu) !== -1;
+};
+
+const mempunyaiKey = <K, V>(map: Map<K, V>, key: K): boolean => {
+	return Array.from(map.keys()).indexOf(key) !== -1;
+};
+
+const splitTrim = (str: string, split: string) => {
+	return str.split(split).map((e) => e.trim());
+};
+
 /**
  * Generator merupakan fungsi yang mengembalikan nilai string
  */
@@ -43,22 +55,22 @@ export const templat = (
 					let $acak: string;
 					do {
 						$acak = acak(dicts[index]);
-						if ($acak.split('').indexOf(';') === -1) {
+						if (adaDalamArray($acak.split(''), ';')) {
 							const result = `${value}${$acak}`;
 							log(`Appending ${result}`);
 							return result;
 						}
-						const statements = $acak.split(';').map((e) => e.trim());
+						const statements = splitTrim($acak, ';');
 						for (let i = 0; i < statements.length; i++) {
 							const statement = statements[i];
 							if (statement.split('=').length === 2) {
-								const splt = statement.split('=').map((e) => e.trim());
+								const splt = splitTrim(statement, '=');
 								variabel.set(splt[0], splt[1]);
 								log(`SET "${splt[0]}" = "${splt[1]}"`);
 							} else if (statement.split('?').length === 2) {
-								const splt = statement.split('?').map((e) => e.trim());
+								const splt = splitTrim(statement, '?');
 								log(`IF "${splt[0]}" == "${splt[1]}"`);
-								if (Array.from(variabel.keys()).indexOf(splt[0]) === -1) {
+								if (mempunyaiKey(variabel, splt[0])) {
 									acakUlang = true;
 									break;
 								}
