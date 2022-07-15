@@ -29,7 +29,7 @@ https://github.com/Andndre/pembuat-kalimat
 | **SIMBOL** |                     **ARTI**                   |
 | ---------- | ---------------------------------------------- |
 | `;`        | PEMISAH STATEMENT (Bisa lebih dari 1 (`AND`))  |
-| `?`        | JIKA KONTEXT SAMA DENGAN                       |
+| `?`        | JIKA KONTEKS SAMA DENGAN                       |
 | `=`        | SET CONTEXT                                    |
 
 > **Note** 
